@@ -1,0 +1,10 @@
+import fs from 'fs';
+
+let fileData;
+
+beforeAll(() => {
+    fileData = fs.readFileSync('path/to/file');
+});
+
+// Такой вызов на уровне модуля (вне хуков), в общем случае, считается неправильным подходом
+// fileData = fs.readFileSync('path/to/file');

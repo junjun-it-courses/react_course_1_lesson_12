@@ -1,0 +1,16 @@
+import makeStack from './../src/scripts/stack.js';
+
+test("stack's main flow", () => {
+    const stack =  new makeStack();
+    stack.push('one');
+    stack.push('two');
+    expect(stack.pop()).toEqual('two');
+});
+
+test("stack's main flow", () => {
+    const stack = new makeStack();
+    stack.push('one');
+    stack.push('two');
+    stack.pop();
+    expect(stack.pop()).toEqual('one');
+});
